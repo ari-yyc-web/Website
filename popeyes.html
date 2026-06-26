@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popeyes Survey Confirmation</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.4;
+        }
+
+        .orange-bar {
+            background-color: #ff8200;
+            height: 25px;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            text-align: left;
+        }
+
+        .main-logo {
+            text-align: center;
+            color: #ff8200;
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+            font-family: "Arial Black", sans-serif;
+        }
+
+        .content-text {
+            font-size: 17px;
+            margin-bottom: 22px;
+        }
+
+        .validation-section {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 35px 0;
+        }
+
+        .stay-connected {
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .footer-brand {
+            color: #ff8200;
+            font-weight: 900;
+            font-size: 28px;
+            margin-top: 20px;
+            font-family: "Arial Black", sans-serif;
+        }
+
+        .footer-rewards {
+            color: #ff8200;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-box {
+            width: 38px;
+            height: 38px;
+            background-color: #55acee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            color: white;
+            font-size: 20px;
+            font-family: serif;
+            text-decoration: none;
+        }
+
+        .facebook-box {
+            background-color: #3b5998;
+        }
+
+        .powered-by {
+            margin-top: 80px;
+            text-align: center;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .powered-link {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="orange-bar"></div>
+
+    <div class="container">
+        <div class="main-logo">POPEYES</div>
+
+        <p class="content-text">
+            Please write the following validation code on your receipt. You will need to bring the receipt with the validation code back to the restaurant to redeem the offer in the next 30 days.
+        </p>
+
+        <div class="validation-section">
+            Validation Code: <span id="validation-code">10000000000</span>
+        </div>
+
+        <p class="content-text">
+            You may now redeem the offer on your receipt during your next visit to this Popeyes®.
+        </p>
+
+        <p class="content-text">
+            We appreciate your input and hope you will visit Popeyes® again very soon.
+        </p>
+
+        <div class="stay-connected">Stay Connected</div>
+
+        <div class="footer-brand">POPEYES</div>
+        <div class="footer-rewards">POPEYES Rewards</div>
+        
+        <div class="social-icons">
+            <div class="social-box">🐦</div>
+            <div class="social-box facebook-box">f</div>
+        </div>
+
+        <div class="powered-by">
+            <a href="#" class="powered-link">Powered by Qualtrics ↗</a>
+        </div>
+    </div>
+
+    <script>
+        function generatePopeyesCode() {
+            // Start with '1'
+            let code = "1";
+            
+            // Add 10 more random digits
+            for (let i = 0; i < 10; i++) {
+                code += Math.floor(Math.random() * 10).toString();
+            }
+            
+            document.getElementById("validation-code").innerText = code;
+        }
+
+        // Generate the code immediately when script loads
+        generatePopeyesCode();
+    </script>
+
+</body>
+</html>
